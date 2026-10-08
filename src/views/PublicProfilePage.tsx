@@ -75,12 +75,20 @@ export const PublicProfilePage: React.FC = () => {
           <Globe className="w-3.5 h-3.5 text-emerald-600" />
           <span>Public URL: <strong className="text-slate-900 font-mono">freelancerhub.com/rithvik</strong></span>
         </div>
-        <button
-          onClick={() => setActiveView('dashboard')}
-          className="px-3 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition-colors border border-slate-200"
-        >
-          <ArrowLeft className="w-3.5 h-3.5" /> Back to Workspace
-        </button>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setActiveView('landing')}
+            className="px-3 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition-colors border border-slate-200"
+          >
+            <Sparkles className="w-3.5 h-3.5 text-emerald-600" /> Homepage
+          </button>
+          <button
+            onClick={() => setActiveView('dashboard')}
+            className="px-3 py-1 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-800 text-xs font-semibold flex items-center gap-1.5 transition-colors border border-emerald-200"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" /> Back to Workspace
+          </button>
+        </div>
       </div>
 
       {/* Hero Header */}

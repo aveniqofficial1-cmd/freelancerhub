@@ -96,17 +96,25 @@ export const LandingPage: React.FC = () => {
       {/* Navigation */}
       <nav className="sticky top-0 z-40 bg-white/90 backdrop-blur-lg border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center text-white font-black shadow-sm">
+          <button
+            onClick={() => {
+              setActiveView('landing');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            className="flex items-center gap-3 text-left group cursor-pointer"
+          >
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center text-white font-black shadow-sm group-hover:scale-105 transition-transform">
               <Sparkles className="w-6 h-6 fill-current" />
             </div>
             <div>
-              <span className="text-xl font-extrabold tracking-tight text-slate-900">FreelancerHub</span>
+              <span className="text-xl font-extrabold tracking-tight text-slate-900 group-hover:text-emerald-700 transition-colors">
+                FreelancerHub
+              </span>
               <span className="hidden sm:inline-block ml-2 text-[10px] font-mono uppercase bg-emerald-100 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded-full font-bold">
-                SaaS Demo
+                PRO
               </span>
             </div>
-          </div>
+          </button>
 
           <div className="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
             <a href="#features" className="hover:text-emerald-700 transition-colors">Features</a>

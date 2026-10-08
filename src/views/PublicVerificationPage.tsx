@@ -31,12 +31,20 @@ export const PublicVerificationPage: React.FC = () => {
       <div className="max-w-3xl mx-auto space-y-6">
         {/* Top bar back button */}
         <div className="flex items-center justify-between">
-          <button
-            onClick={() => setActiveView('dashboard')}
-            className="text-xs text-slate-600 hover:text-slate-900 flex items-center gap-1.5 font-semibold"
-          >
-            <ArrowLeft className="w-4 h-4" /> Back to Workspace
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setActiveView('landing')}
+              className="text-xs text-slate-600 hover:text-slate-900 flex items-center gap-1.5 font-semibold bg-white border border-slate-200 px-3 py-1.5 rounded-xl shadow-2xs"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-emerald-600" /> Homepage
+            </button>
+            <button
+              onClick={() => setActiveView('dashboard')}
+              className="text-xs text-emerald-800 hover:text-emerald-950 flex items-center gap-1.5 font-semibold bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-xl shadow-2xs"
+            >
+              <ArrowLeft className="w-4 h-4" /> Back to Workspace
+            </button>
+          </div>
 
           <span className="text-[11px] font-mono text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full flex items-center gap-1.5 font-semibold shadow-2xs">
             <Lock className="w-3 h-3" /> Cryptographically Verified Record

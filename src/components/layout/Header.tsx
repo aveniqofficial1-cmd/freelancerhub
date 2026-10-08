@@ -290,6 +290,13 @@ export const Header: React.FC = () => {
 
               <div className="py-1">
                 <button
+                  onClick={() => { setActiveView('landing'); setIsProfileMenuOpen(false); }}
+                  className="w-full text-left px-3.5 py-2 text-xs flex items-center gap-2.5 text-slate-700 hover:bg-slate-50"
+                >
+                  <Sparkles className="w-4 h-4 text-emerald-600" />
+                  <span>FreelancerHub Homepage</span>
+                </button>
+                <button
                   onClick={() => { setActiveView('profile'); setIsProfileMenuOpen(false); }}
                   className="w-full text-left px-3.5 py-2 text-xs flex items-center gap-2.5 text-slate-700 hover:bg-slate-50"
                 >

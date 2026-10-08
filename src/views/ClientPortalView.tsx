@@ -428,8 +428,17 @@ export const ClientPortalView: React.FC = () => {
 
         <div className="flex items-center gap-2.5">
           <button
+            onClick={() => setActiveView('landing')}
+            className="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs flex items-center gap-1.5 transition-colors shadow-2xs"
+            title="Go to FreelancerHub Homepage"
+          >
+            <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+            <span className="hidden sm:inline">Homepage</span>
+          </button>
+
+          <button
             onClick={() => setActiveView('dashboard')}
-            className="px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs flex items-center gap-1.5 transition-colors shadow-2xs"
+            className="px-3.5 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-bold text-xs flex items-center gap-1.5 transition-colors shadow-2xs border border-emerald-200"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span className="hidden sm:inline">Switch to Freelancer View</span>

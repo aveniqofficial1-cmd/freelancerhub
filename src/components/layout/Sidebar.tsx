@@ -57,8 +57,9 @@ export const Sidebar: React.FC = () => {
       {/* Brand Logo Header */}
       <div className="h-16 px-5 flex items-center justify-between border-b border-slate-200 bg-white">
         <button
-          onClick={() => setActiveView('dashboard')}
+          onClick={() => setActiveView('landing')}
           className="flex items-center gap-2.5 text-left group"
+          title="Open FreelancerHub Homepage"
         >
           <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center text-white font-black shadow-sm group-hover:scale-105 transition-transform">
             <Sparkles className="w-5 h-5 fill-current" />

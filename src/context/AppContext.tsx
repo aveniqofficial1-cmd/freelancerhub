@@ -220,8 +220,8 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
   const [notifications, setNotifications] = useState<NotificationItem[]>(savedState?.notifications || initialNotifications);
   const [templates, setTemplates] = useState<TemplateItem[]>(savedState?.templates || initialTemplates);
 
-  // App UI State
-  const [activeView, setActiveView] = useState<string>('dashboard');
+  // App UI State (Defaults to Landing Page / Homepage)
+  const [activeView, setActiveView] = useState<string>('landing');
   const [selectedProjectId, setSelectedProjectId] = useState<string | null>(null);
   const [selectedClientId, setSelectedClientId] = useState<string | null>(null);
   const [selectedDocumentId, setSelectedDocumentId] = useState<string | null>(null);
